@@ -1,7 +1,6 @@
 /**
- * Camada de Interface (UI) - Responsável por manipular o DOM e renderizar a tela
+ * Camada de Interface (UI) - Responsável por manipular o DOM e renderizar a tela.
  */
-
 import { analisarCandidato } from './motor.js';
 
 /**

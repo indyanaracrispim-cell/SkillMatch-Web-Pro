@@ -1,5 +1,5 @@
 /**
- * Arquivo Principal (Main) - Ponto de entrada da aplicação
+ * Arquivo Principal (Main) - Ponto de entrada da aplicação - orquestra todos os fluxos e integra a lógica com a ineterface.
  */
 
 import { buscarVagasDoServidor } from './dados.js';
