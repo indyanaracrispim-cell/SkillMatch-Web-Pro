@@ -1,4 +1,4 @@
-# SkillMatch Web Pro 🚀
+# SkillMatch Web Pro 🚀   DeV´agas
 
 > Plataforma web de triagem e alinhamento que compara perfis técnicos com requisitos de vagas em tecnologia e saúde digital.
 
@@ -21,7 +21,7 @@ O sistema permite que o usuário crie e salve seu perfil profissional. A aplica�
 
 ## 🛠️ Tecnologias e Conceitos Aplicados
 
-- *HTML5 Semântico:* Estruturação limpa e acessível, construída totalmente sem o uso de tags <div>.
+- *HTML5 Semântico:* Estruturação limpa e acessível, priorizando tags semânticas para melhor estruturação do conteúdo.
 - *CSS3 Moderno:* Layout responsivo construído exclusivamente com *Flexbox* (sem uso de Grid).
 - *JavaScript Avançado (ES6+):*
   - Programação Orientada a Objetos (POO) com classes e herança.
@@ -31,6 +31,32 @@ O sistema permite que o usuário crie e salve seu perfil profissional. A aplica�
   - Modularização de código através de Módulos ES (import/export).
   - Gerenciamento de estado com LocalStorage.
 
+## 🚀 Como Executar
+
+1. Clone este repositório para sua máquina local:
+   `git clone [URL-DO-SEU-REPOSITORIO]`
+2. Abra a pasta do projeto no VS Code.
+3. Utilize a extensão **Live Server** para abrir o arquivo `index.html` no seu navegador e visualizar o sistema em funcionamento.
+
+---
+
+## 📋 Trello / Kanban do Projeto
+Acompanhe o planejamento, as tarefas realizadas e o progresso do desenvolvimento através do nosso quadro público:
+(https://trello.com/b/5tmKN9Ip/meu-quadro-do-trello)
+
+---
+
+## 🎥 Demonstração em Vídeo
+Assista à apresentação do projeto, onde explico o objetivo do sistema e demonstro o fluxo de funcionamento:
+[Link para o vídeo no Google Drive aqui]
+
+---
+
+## 💡 Melhorias Futuras
+Visando a evolução contínua do SkillMatch Web Pro, as próximas implementações planejadas são:
+* Implementar busca por palavras-chave nas vagas em tempo real.
+* Adicionar funcionalidade de exportação do plano de estudos em formato PDF.
+* Integração com uma API externa real de listagem de vagas.
 ---
 
 ## 🗂️ Estrutura de Pastas do Projeto
@@ -50,13 +76,6 @@ skillmatch-web/
 ├── index.html              # Estrutura semântica da aplicação
 └── readme.md               # Documentação do projeto.
 ```
-
-## 📅 Organização e Metodologia
-
-​O desenvolvimento deste projeto seguiu boas práticas de engenharia de software, utilizando Git Flow e gerenciamento ágil:
-​Quadro Kanban: [ACESSAR O QUADRO PÚBLICO DO TRELLO](https://trello.com/b/5tmKN9Ip/meu-quadro-do-trello)
-​Histórico de Commits: Commits semânticos e organizados diretamente na branch develop antes do merge final.
-
 ---
 
 ## 👩‍💻 Autora
