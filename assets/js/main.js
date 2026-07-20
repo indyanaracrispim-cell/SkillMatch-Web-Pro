@@ -36,6 +36,56 @@ async function inicializarAplicacao() {
       );
     });
 
+    async function inicializarAplicacao() {
+  mostrarCarregamento();
+
+  try {
+    const vagasBrutas = await buscarVagasDoServidor();
+
+    bancoDeVagasInstanciadas = vagasBrutas.map(vaga => {
+      if (vaga.frameworkPrincipal) {
+        return new VagaFrontEnd(
+          vaga.id,
+          vaga.empresa,
+          vaga.cargo,
+          vaga.requisitos,
+          vaga.salario,
+          vaga.modalidade,
+          vaga.frameworkPrincipal
+        );
+      }
+      return new Vaga(
+        vaga.id,
+        vaga.empresa,
+        vaga.cargo,
+        vaga.requisitos,
+        vaga.salario,
+        vaga.modalidade
+      );
+    });
+    
+    const statusElement = document.getElementById('status');
+    if (bancoDeVagasInstanciadas.length === 0) {
+      if (statusElement) statusElement.textContent = "Nenhuma vaga encontrada no servidor.";
+      const containerResultados = document.getElementById('resultados');
+      if (containerResultados) containerResultados.innerHTML = '';
+      return; // Interrompe o fluxo já que não há vagas para mapear
+    }
+
+    carregarPerfilSalvo();
+    configurarCliquesDeSugestao(); 
+
+    if (statusElement) {
+      statusElement.textContent = `Banco de dados carregado com sucesso! ${bancoDeVagasInstanciadas.length} vagas mapeadas para análise.`;
+    }
+
+    const containerResultados = document.getElementById('resultados');
+    if (containerResultados) containerResultados.innerHTML = '';
+
+  } catch (erro) {
+    mostrarErroNaTela(erro.message);
+  }
+}
     carregarPerfilSalvo();
     configurarCliquesDeSugestao(); // Ativa as tags clicáveis de sugestão rápida
 
