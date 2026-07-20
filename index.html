@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillMatch JS Pro - Plataforma de Triagem</title>
+  <!-- Link para o CSS que faremos em seguida -->
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <header style="text-align: center; padding: 20px 10px;">
+  <h1>⚡ Skill<span style="font-weight: 300; opacity: 0.9;">Match</span> <strong style="font-size: 0.55em; background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 10px; vertical-align: middle;"> Vagas</strong></h1>
+  <p>Plataforma de Triagem e Alinhamento de Vagas</p>
+</header>
+
+  <main>
+    <!-- FORMULÁRIO DE CADASTRO DO PERFIL -->
+    <section class="container-formulario">
+      <h2>Perfil Profissional</h2>
+      <form id="form-perfil">
+        <section class="campo-grupo">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" required placeholder="Ex: Ana Silva">
+        </section>
+
+        <section class="campo-grupo">
+          <label for="area">Área de Atuação:</label>
+          <select id="area" required>
+            <option value="">Selecione...</option>
+            <option value="Front-End">Front-End</option>
+            <option value="HealthTech">HealthTech / Saúde Digital</option>
+            <option value="Geral">Desenvolvimento Geral</option>
+          </select>
+        </section>
+
+        <section class="campo-grupo">
+          <label for="experiencia">Experiência (em meses):</label>
+          <input type="number" id="experiencia" min="0" required placeholder="Ex: 6">
+        </section>
+
+        <section class="campo-grupo">
+          <label for="habilidades">Suas Habilidades:</label>
+          <input type="text" id="habilidades" required placeholder="Ex: HTML, CSS, JavaScript, GitHub, React, Node.js, SQL, Python">
+          <small style="display:block; margin-top:0.5rem; color:#718096;">
+            <strong>💡 Dica: Clique nas tags para adicionar rápido:</strong> 
+            <span class="sugestao-tag" style="background:#e2e8f0; padding:0.2rem 0.4rem; border-radius:4px; font-weight:600; font-size:0.8rem;">HTML</span>, 
+            <span class="sugestao-tag" style="background:#e2e8f0; padding:0.2rem 0.4rem; border-radius:4px; font-weight:600; font-size:0.8rem;">CSS</span>, 
+            <span class="sugestao-tag" style="background:#e2e8f0; padding:0.2rem 0.4rem; border-radius:4px; font-weight:600; font-size:0.8rem;">JavaScript</span>, 
+            <span class="sugestao-tag" style="background:#e2e8f0; padding:0.2rem 0.4rem; border-radius:4px; font-weight:600; font-size:0.8rem;">React</span>, 
+            <span class="sugestao-tag" style="background:#e2e8f0; padding:0.2rem 0.4rem; border-radius:4px; font-weight:600; font-size:0.8rem;">SQL</span>
+            <span class="sugestao-tag" style="background:#e2e8f0; padding:0.2rem 0.4rem; border-radius:4px; font-weight:600; font-size:0.8rem;">GitHub</span>
+            <span class="sugestao-tag" style="background:#e2e8f0; padding:0.2rem 0.4rem; border-radius:4px; font-weight:600; font-size:0.8rem;">Node.js</span>
+            <span class="sugestao-tag" style="background:#e2e8f0; padding:0.2rem 0.4rem; border-radius:4px; font-weight:600; font-size:0.8rem;">Python</span>
+            
+            
+          </small>
+        </section>
+
+        <section style="display: flex; gap: 1rem; margin-top: 1rem; max-width: 400px; margin-left: auto; margin-right: auto;">
+  <button type="submit" id="btnSalvar" style="flex: 3; padding: 10px; cursor: pointer;">Salvar Perfil e Analisar</button>
+  <button type="button" id="btnLimpar" style="flex: 1.5; padding: 10px; background-color: #5b5e63; cursor: pointer;">Limpar</button>
+</section>
+        
+      </form>
+
+    <!-- ÁREA DE STATUS DA API E AUDITORIA -->
+    <section class="container-status">
+      <span class="status" id="status">Aguardando preenchimento do perfil...</span>
+    </section>
+
+    <!-- PAINEL DE RESULTADOS (ONDE SURGIRÃO OS CARDS) -->
+    <section id="resultados"></section>
+  </main>
+
+  <!-- SCRIPT COMO MÓDULO (CRITÉRIO 15) -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
