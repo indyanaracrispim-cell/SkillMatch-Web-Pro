@@ -48,7 +48,7 @@ Acompanhe o planejamento, as tarefas realizadas e o progresso do desenvolvimento
 
 ## 🎥 Demonstração em Vídeo
 Assista à apresentação do projeto, onde explico o objetivo do sistema e demonstro o fluxo de funcionamento:
-[Link para o vídeo no Google Drive aqui]
+(https://youtu.be/JigoY0y-M_s)
 
 ---
 
